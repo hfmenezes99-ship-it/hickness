@@ -118,6 +118,9 @@ export function renderHoje() {
       <div class="dayline">${status}</div>
       ${bar(p.before ? 0 : p.dayN, 28, 'proto')}
     </header>
+    ${p.n >= 28 ? `<section class="card agora"><div class="eyebrow">Dia 28</div><h2>Fechamento do protocolo</h2><button class="btn big primary" data-act="go" data-to="#metas">Ver dia 1 × dia 28</button></section>` : ''}
+    ${!state.weights[date] && minutesOfDay(now()) < hm('11:00') && !p.before && !p.after ? `<section class="card wq"><label class="mut small" for="wq">Peso em jejum</label>
+      <label class="inp wide"><input id="wq" data-change="w-today" data-date="${date}" inputmode="decimal" enterkeyhint="done" placeholder="${num(state.weights[Object.keys(state.weights).sort().pop()] ?? state.settings.startWeight, 1)}"><span>kg</span></label></section>` : ''}
     ${agoraCard(date)}
     ${treinoCard(date)}
     ${resumoCard(date, p)}

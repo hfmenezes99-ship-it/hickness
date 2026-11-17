@@ -29,6 +29,7 @@ function migrate(s) {
 }
 
 export let state = load();
+try { if (!localStorage.getItem(KEY)) localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* sem storage */ }
 
 function load() {
   try { return migrate(JSON.parse(localStorage.getItem(KEY))); } catch { return fresh(); }

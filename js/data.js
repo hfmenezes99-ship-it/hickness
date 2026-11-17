@@ -14,6 +14,7 @@ export const DEFAULT_SETTINGS = {
   restCompound: 150,
   restOther: 75,
   shoulderSwap: false,
+  notif: { on: false, refeicoes: true, agua: true, treino: true, peso: true },
 };
 
 // Dias de treino de musculação: seg(1), ter(2), qui(4), sex(5)
