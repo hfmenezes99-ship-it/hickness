@@ -1,0 +1,9 @@
+{
+  "name": "protocolo-28",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PWA pessoal de dieta, treino e metas para 28 dias.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
